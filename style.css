@@ -26,13 +26,13 @@ section{
     padding-top: 1em;
     padding-bottom: 1em;
     width:auto;
-    background: #1f3437;
+    background: #04333c;
 }
 
 
 .logo a {
     text-decoration: none;
-    color:#fff;  
+    color:cornflowerblue;  
     font-weight: bold;
     font-style:italic;
     font-family: serif;
@@ -92,54 +92,6 @@ section{
     border-bottom:3px solid #1abc9c;
     transition: .3s;
 }
-/* animation */
-  .box ul li{
-    position:absolute;
-    width:35px;
-    height:35px;
-    list-style-type: none;
-    opacity:0; 
-    background:radial-gradient(deepskyblue,transparent,transparent);
-    bottom:0;
-    left: 10vw;
-    animation:animate 10s linear infinite;  
-}
-.box ul li:nth-child(2){
-    left:37vw;
-    animation-delay:2s;
-}
-.box ul li:nth-child(3){
-    left:25vw;
-    animation-delay:4s;
-}
-.box ul li:nth-child(4){
-    left:60vw;
-    animation-delay:6s;
-}
-.box ul li:nth-child(5){
-    left:45vw;
-    animation-delay:6s;
-}
-.box ul li:nth-child(6){
-    left:68vw;
-    animation-delay:4s;
-}
-.box ul li:nth-child(7){
-    left:75vw;
-    animation-delay:2s;
-}
-.box ul li:nth-child(8){
-    left:48vw;
-    animation-delay:6s;
-}
-.box ul li:nth-child(9){
-    left:59vw;
-    animation-delay:4s;
-}
-.box ul li:nth-child(10){
-    left:29vw;
-    animation-delay:6s;
-}
 @keyframes animate{
     0%{
         transform:scale(0);
@@ -182,13 +134,13 @@ ul li:hover div.dropdown{
 }
 .image img{
     border-style: groove;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-top: 4em;
 }
 img{
     height: 17em;
     width:15em;
-    border-radius:50%;
+    border-radius:20%;
     transform: scale(1.50);
     justify-content:space-between;
 }
@@ -203,15 +155,15 @@ img{
     height:100%;
     position:absolute;
     background:#040f22;
-    border-left:2px solid #fc6060;
-    animation: typing  2.5s  steps(12) infinite;
+    border-left:2px solid #f8e2e2;
+    animation: typing  3s  steps(9) infinite;
 }
 
 @keyframes typing{
 
     100%{
-      left:66%;
-      margin:0 -35px 0 35px;
+      left:60%;
+      margin:0 -32px 0 32px;
     }
 }
 .im{
@@ -227,14 +179,14 @@ img{
     font-weight: bold;
     font-size: 35px;
     font-weight: 60px;
-    color:white;
+    color:#13b5ce;
 }
 .developer{
     text-transform:uppercase;
     text-align: justify;
     font-size: 13px;
     font-weight: bold;
-    color: gray;
+    color: aquamarine;
     padding-top:12px;
     align-items: center;
 
@@ -242,12 +194,14 @@ img{
 .para{
      padding-top:8px;
      font-size: 16px;
-     color: gray;
+     color: #6bd72ddb;
      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      font-weight:bold;
+     align-items: center;
+     margin-right:2em;
 }
 .homebutton{
-    padding-top: 20px;
+    padding-top: 25px;
 }
 @keyframes changeColor{
     from{ background-color:red;}
@@ -298,23 +252,28 @@ img{
 .imagebox{
     position: relative;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 20%;
+    z-index:1;
 }
 .imagebox:before{
     content: "";
     position: absolute;
-    inset:-70px -140px;
-    background: linear-gradient(315deg,#00ccff,#d400d4);
-    transition:0.5s;
-    animation:images .5s linear infinite;
+    inset: -77px -100px;
+    background: linear-gradient(315deg, #00ccff, #040f22);
+    transition: 0.5s;
+    animation: images .5s linear infinite;
+    margin-top: 4.8em;
+    border-radius: 5em;
+    margin-left: 6.3em;
+    margin-right: 2.5em;
 }
 .image{
     position: relative;
-    height: 50vh;
+    height: 51vh;
     align-self: flex-end;
-    size-adjust: 30%;
+    size-adjust: 20%;
     min-width: fit-content;
+    margin-left: 4em;
 }
 .frontpageimage .image{
         display: flex;
@@ -421,7 +380,7 @@ img{
     margin-top: 6em;
     padding-bottom: 5em;
     text-align: left;
-    color: #7cf03d;
+    color: #fff;
     margin-right: 47em;
 }
 .htmlskill{
@@ -436,6 +395,7 @@ img{
 .details{
     word-spacing: 1px;
     align-items: left;
+    color:#7cf03d;
 }
 .age{
     padding-bottom: 15px ;
@@ -747,4 +707,60 @@ form .button input{
         width: 80%;
         margin: 20px auto;
     }
+}
+/* blogs */
+
+/* Resetting some default styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+.blogsimage img {
+    height: 18vh;
+    width: 74%;
+    padding-bottom: 3em;
+}
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.post {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.post img {
+    max-width: 74%;
+    border-radius: 10px;
+}
+
+.post h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.post p {
+    font-size: 1em;
+    color: #666;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
