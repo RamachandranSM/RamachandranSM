@@ -5,26 +5,41 @@
 
 body {
     font-family: Arial, sans-serif; 
+    background: #040f22;
+    scroll-snap-type: y mandatory;
+}
+body {
+    overflow-x: hidden;
 }
 
+section{
+    height: 100vh;
+    display: flex;
+    scroll-snap-align: start;
+}
 .nav-item {
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 18px;
-    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width:auto;
+    background: #1f3437;
 }
+
 
 .logo a {
     text-decoration: none;
-    color:orange;  
+    color:#fff;  
     font-weight: bold;
     font-style:italic;
     font-family: serif;
     font-size:25px;
     display:absolute;
-
+    margin: 0;
+    padding: 0;
 }   
 
 .nav-ul {
@@ -77,6 +92,67 @@ body {
     border-bottom:3px solid #1abc9c;
     transition: .3s;
 }
+/* animation */
+  .box ul li{
+    position:absolute;
+    width:35px;
+    height:35px;
+    list-style-type: none;
+    opacity:0; 
+    background:radial-gradient(deepskyblue,transparent,transparent);
+    bottom:0;
+    left: 10vw;
+    animation:animate 10s linear infinite;  
+}
+.box ul li:nth-child(2){
+    left:37vw;
+    animation-delay:2s;
+}
+.box ul li:nth-child(3){
+    left:25vw;
+    animation-delay:4s;
+}
+.box ul li:nth-child(4){
+    left:60vw;
+    animation-delay:6s;
+}
+.box ul li:nth-child(5){
+    left:45vw;
+    animation-delay:6s;
+}
+.box ul li:nth-child(6){
+    left:68vw;
+    animation-delay:4s;
+}
+.box ul li:nth-child(7){
+    left:75vw;
+    animation-delay:2s;
+}
+.box ul li:nth-child(8){
+    left:48vw;
+    animation-delay:6s;
+}
+.box ul li:nth-child(9){
+    left:59vw;
+    animation-delay:4s;
+}
+.box ul li:nth-child(10){
+    left:29vw;
+    animation-delay:6s;
+}
+@keyframes animate{
+    0%{
+        transform:scale(0);
+        opacity:1;
+        bottom:0;
+    }
+    100%{
+        transform:scale(10);
+        opacity: 0;
+        bottom:100vh;
+    }
+}
+/* end animation */
 ul li div.dropdown li{
   display:block;
   margin: 2px 0px;
@@ -95,6 +171,7 @@ ul li:hover div.dropdown{
     display: block;
     background-color:#000;
 }
+
 .homepage{
     text-align: left;
     padding-top: 4.2%;
@@ -104,16 +181,48 @@ ul li:hover div.dropdown{
     padding-bottom:12em;
 }
 .image img{
-    border-radius: 20px;
     border-style: groove;
+    border-radius: 50%;
+    margin-top: 4em;
 }
 img{
-    height: 21.5em;
-    width: 18em;
+    height: 17em;
+    width:15em;
+    border-radius:50%;
     transform: scale(1.50);
     justify-content:space-between;
 }
-.ram{
+.homepage .ram{
+    position:relative;
+}
+.homepage div.ram:after{
+    content:"";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#040f22;
+    border-left:2px solid #fc6060;
+    animation: typing  2.5s  steps(12) infinite;
+}
+
+@keyframes typing{
+
+    100%{
+      left:66%;
+      margin:0 -35px 0 35px;
+    }
+}
+.im{
+    font-family:  'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 35px;
+    font-weight: 60px;
+    color:white;
+    position:relative;
+}
+.ram {
     font-family:  'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 35px;
@@ -123,9 +232,8 @@ img{
 .developer{
     text-transform:uppercase;
     text-align: justify;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: bold;
-    font-palette: light;
     color: gray;
     padding-top:12px;
     align-items: center;
@@ -176,7 +284,7 @@ img{
 
 .homepage{
     display: flex;
-
+     margin-top: 2em;
 }
 .hire{
    padding-left:30px ;
@@ -186,11 +294,24 @@ img{
    box-sizing: content-box;
    border-width: left 20px;
 }
+/* image box start */
+.imagebox{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imagebox:before{
+    content: "";
+    position: absolute;
+    inset:-70px -140px;
+    background: linear-gradient(315deg,#00ccff,#d400d4);
+    transition:0.5s;
+    animation:images .5s linear infinite;
+}
 .image{
     position: relative;
-    height: fit-content;
-    margin-left: 20%;
-    margin-right:2%;
+    height: 50vh;
     align-self: flex-end;
     size-adjust: 30%;
     min-width: fit-content;
@@ -267,9 +388,6 @@ img{
     transform: translate(-50%, -50%);
     background-color:#d03645;
 }
-body{
-    background: #0c192c;
-}
 .servicecolor{
     width: 100%;
     height: 100vh;
@@ -342,13 +460,13 @@ body{
     position: relative;
 }
 .myservice h3:after {
-        content: "";
-        height: 4px;
-        left: 27em;
-        top: 100%;
-        width: 9%;
-        background-color: white;
-        position: absolute;
+    content: "";
+    height: 4px;
+    left: 25em;
+    top: 100%;
+    width: 8%;
+    background-color: white;
+    position: absolute;
 }
 .serviceinfo{
     display: flex;
@@ -389,22 +507,6 @@ body{
     padding-left: 6px;
     padding-right: 5px;
 }
-/* ul.dropdown li{
-    display: hidden;
-}
-ul li ul.dropdown{
-    width:100%;
-    font-display: hidden;
-    display:hidden;
-    background:transparent;
-    position:absolute;
-    display:none;
-    z-index:999;
-}
-ul:hover .dropdown{
-    display: hidden;
-} */
-
 form{
     overflow: hidden;
 }
@@ -524,25 +626,24 @@ form .button input{
 } 
 /* service cards starting*/
 .cards {
-    width: 15%;
-    margin: 41px;
+    width: 14%;
+    margin: 40px;
     background: white;
     border-radius: 4px;
     display: block;
     flex-direction: row;
-    margin-left: 6em;
+    margin-left: 6%;
     position: relative;
 }
 .cards .img img {
-    width: 9.5em;
+    width: 8em;
     height: 8em;
     margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 2em;
+    margin-left: 26px;
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     padding-inline-start: 3px;
-    margin-right: 1em;
     position: relative;
 }
 
@@ -563,14 +664,15 @@ form .button input{
     margin-bottom: 1em;
 }
 .ourprojects h2 {
-    position: relative;
     font-size: 25px;
     display: block;
+    position:relative;
     border-radius: 1px;
     margin-bottom: 3em;
-    margin-inline: 23em;
-    margin-top: 3em;
+    margin-inline: 20em;
+    margin-top: 1em;
     margin-left: 25em;
+    position:relative;
 }
 .ourprojects h2:before {
     content: '';
@@ -598,8 +700,51 @@ form .button input{
 }
 
 .cards:hover{
-    box-shadow:2px 2px 5px 5px  #1abc9d;
-    border:2px solid #1abc9d;
+    box-shadow: 2px 2px 2px 13px #1abc9d;
+    border:4px solid #1abc9d;
     cursor:pointer;
     transition:.3s;
+}
+
+/* Responsive adjustments for small screens */
+@media only screen and (max-width: 768px) {
+    .nav-ul {
+        padding-left: 5%; 
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .nav-link {
+        flex-direction: column;
+    }
+
+    .nav-link li {
+        margin: 10px 0;
+    }
+
+    .homepage, .landpage {
+        padding-left: 5%;
+        width: 100%;
+    }
+
+    .image img {
+        height: 12em;
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .container .skillpercentage {
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .serviceinfo {
+        flex-direction: column;
+        margin-top: 3em;
+    }
+
+    .cards {
+        width: 80%;
+        margin: 20px auto;
+    }
 }
