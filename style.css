@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+}
+
+.nav-item {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 18px;
+    margin-top: 1em;
+}
+
+.logo a {
+    text-decoration: none;
+    color:orange;  
+    font-weight: bold;
+    font-style:italic;
+    font-family: serif;
+    font-size:25px;
+    display:absolute;
+
+}   
+
+.nav-ul {
+    padding-left: 30%; 
+    margin-left: 6.5%;
+}
+.nav-link {
+    display: flex; 
+}
+
+.nav-link li {
+    list-style-type: none;
+    margin-right:15px; 
+    flex-direction: row;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+    display: inline-block;
+}
+.nav-link a{
+    float: left;
+}
+.nav-link li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; 
+    font-family: Times, 'Times New Roman', serif;
+    font-weight:bold;
+    letter-spacing: .2px;
+}   
+
+.nav-item .call {
+    background-color: #007BFF; 
+    color: white; 
+    padding: 10px 21px;  
+    font-weight:bold;
+    border: none; 
+    border-radius: 18px; 
+    text-decoration: none; 
+    text-align:center;
+}
+
+.nav-item .call:hover {
+    background-color: #c7032df5; 
+}
+.nav-link a:hover{
+    color:#0ef;
+    transition:.3s;
+}
+.nav-link .active {
+    border-bottom:3px solid #1abc9c;
+    transition: .3s;
+}
+ul li div.dropdown li{
+  display:block;
+  margin: 2px 0px;
+  padding-bottom:2em;
+}
+ul li div.dropdown{
+    width:auto;
+    position:absolute;
+    z-index:999;
+    display:none;
+    background-color: black;
+    margin-top:2em;
+}
+ul li:hover div.dropdown{
+    position:absolute;
+    display: block;
+    background-color:#000;
+}
+.homepage{
+    text-align: left;
+    padding-top: 4.2%;
+    width:64em;
+    align-items: flex-end;
+    margin-left: 16px;
+    padding-bottom:12em;
+}
+.image img{
+    border-radius: 20px;
+    border-style: groove;
+}
+img{
+    height: 21.5em;
+    width: 18em;
+    transform: scale(1.50);
+    justify-content:space-between;
+}
+.ram{
+    font-family:  'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 35px;
+    font-weight: 60px;
+    color:white;
+}
+.developer{
+    text-transform:uppercase;
+    text-align: justify;
+    font-size: 13.5px;
+    font-weight: bold;
+    font-palette: light;
+    color: gray;
+    padding-top:12px;
+    align-items: center;
+
+}
+.para{
+     padding-top:8px;
+     font-size: 16px;
+     color: gray;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight:bold;
+}
+.homebutton{
+    padding-top: 20px;
+}
+@keyframes changeColor{
+    from{ background-color:red;}
+    to  {background-color:rgb(0, 119, 255)}
+}
+.homepage .frontpageimage{
+    margin-bottom: auto;
+    display: block;
+}
+.homebutton .button {
+    background-color: #04AA6D; 
+    color: white; 
+    padding: 15px 32px; 
+    border: none; 
+    text-align:center;
+    box-sizing: border-box;
+    border-radius: 18px; 
+    text-decoration: none; 
+    display:inline-block;
+    font-size:16px;
+    animation:changeColor 3s infinite;
+    width:100%;
+}
+.landpage{
+    padding-top:6.6%;
+    padding-left:11%;
+    padding-inline-end:30% ;
+    text-align:center;
+}
+.homebutton{
+    padding-right:30px;
+    display: flex;
+}
+
+.homepage{
+    display: flex;
+
+}
+.hire{
+   padding-left:30px ;
+   padding-inline: left 30px; 
+   font-size: 18;
+   font: bold;
+   box-sizing: content-box;
+   border-width: left 20px;
+}
+.image{
+    position: relative;
+    height: fit-content;
+    margin-left: 20%;
+    margin-right:2%;
+    align-self: flex-end;
+    size-adjust: 30%;
+    min-width: fit-content;
+}
+.frontpageimage .image{
+        display: flex;
+        justify-content: flex-end;  
+      
+ }
+.container{
+    align-items: flex-start;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container .skillpercentage{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    display: inline-grid;
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 8%;
+    color: orange;
+    
+}
+.subject{
+    font-size: 18px;
+    font-weight: thin;
+    color:#808080;
+    padding-bottom:15px;
+    text-transform: uppercase;
+}
+.progress-bar{
+    position: relative;
+    width: 400%;
+    height: 5px;
+    background-color: #808080;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.progress-bar:after{
+    position: absolute;
+    content: attr(value);
+    top:-35px ;
+    right: 0;
+    color: #808080;
+    font-size:16px;
+}
+.progress-line{
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background-color: rgb(236, 201, 45);
+    border-radius: 15px;
+    top:-1px;
+    animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+@keyframes animate{
+    100%{
+        width: 100%;
+    }
+}
+.progress-line:after{
+    content: "";
+    position:absolute;
+    width: 13px;
+    height:13px;
+    border-radius: 50%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color:#d03645;
+}
+body{
+    background: #0c192c;
+}
+.servicecolor{
+    width: 100%;
+    height: 100vh;
+}
+.aboutme{
+    align-items: center;
+    padding-bottom: 2px;
+    padding-top: 3em;;
+    border-radius:35em;
+    text-align: center;
+    justify-content: center;
+    color:#1abc9d;
+    font-size: 17px;
+}
+.aboutme h2{
+    position: relative;
+    font-size: 25px;
+    display: inline-block;
+    border-radius:1px;
+}
+.aboutme h2:before {
+    content: '';
+    height: 5px;
+    left: 1.3em;
+    top: 100%;
+    width: 60%;
+    background-color: white;
+    position: absolute;
+}
+.aboutpara{
+    margin-top: 6em;
+    padding-bottom: 5em;
+    text-align: left;
+    color: #7cf03d;
+    margin-right: 47em;
+}
+.htmlskill{
+    padding-bottom: 3em;;
+}
+.cssskill{
+    padding-bottom:3em;
+}
+.jsskill{
+    padding-bottom:3em;
+}
+.details{
+    word-spacing: 1px;
+    align-items: left;
+}
+.age{
+    padding-bottom: 15px ;
+}
+.email{
+    padding-bottom: 15px ;
+}
+.address{
+    padding-bottom: 15px ;
+}
+.phone{
+    padding-bottom: 15px ;
+}
+.myservice h3 {
+    text-align: center;
+    align-items: center;
+    color: #1abc9d;
+    margin-top: 3em;
+    font-weight: bold;
+    display: block;
+    font-size: 25px;
+    position: relative;
+}
+.myservice h3:after {
+        content: "";
+        height: 4px;
+        left: 27em;
+        top: 100%;
+        width: 9%;
+        background-color: white;
+        position: absolute;
+}
+.serviceinfo{
+    display: flex;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top:6em;
+    gap: 1px;
+}
+.servicehead{
+    text-align: center;
+    color: white;
+    padding-bottom: 6em;
+    border: 1px solid #0099ff;
+    margin-inline: 17px;
+    padding-top: 5em;
+    background: #040f22;
+    border-radius: 12px;
+    margin-bottom: 5em;
+}
+.servicehead:hover {
+    border:  #333333 2px solid;
+    cursor:pointer;
+    transition: .5s;
+    box-shadow:2px 2px 5px 5px;
+}
+.servicehead h4{
+    font-size: 17px;
+    display: ruby-text;
+    border-radius: 3px;
+    color: #0ef;
+    font-weight:bold;
+}
+.servicehead p {
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 5px;
+}
+/* ul.dropdown li{
+    display: hidden;
+}
+ul li ul.dropdown{
+    width:100%;
+    font-display: hidden;
+    display:hidden;
+    background:transparent;
+    position:absolute;
+    display:none;
+    z-index:999;
+}
+ul:hover .dropdown{
+    display: hidden;
+} */
+
+form{
+    overflow: hidden;
+}
+.logindiv{
+   max-width: 440px;
+   padding: 0 20px;
+   margin: 170px auto;
+}
+.login-logo a {
+    position: absolute;
+    display: inline-block;
+    margin-top: -5em;
+    margin-left: 1em;
+}
+.wrapper{
+    width: 100%;
+    background:#fff;
+    border-radius: 5px;
+}
+.wrapper .title{
+    line-height: 90px;
+    background:transform;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    color:#1abc9d;
+}
+.wrapper form{
+    padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+    height: 45px;
+    background: #ff0000;
+    margin-bottom: 15px;
+    position:relative;
+}
+form .row input:focus{
+    border-color: #16a085;
+    box-shadow: inset 2px 2px 2px 2px rgba(8, 205, 240, 0.753);
+}
+.wrapper form .row input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 0px;
+    border-radius: 3px;
+    border: 1px solid rgba(211, 211, 211, 0.76);
+    font-size: 16px;
+    transition: all .3s ease;
+    text-align: center;
+}
+.wrapper form .row i{
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color:#fff;
+    background: #16a085;
+    border: 1px solid #16a085;
+    border-radius: 5px 0 0 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper form .button input{
+    padding-left: 0px;
+    font-size: 18px;
+    color: #fff;
+    background: #16a085;
+    font-weight: 500;
+    border: 1px solid #16a085;
+    cursor: pointer;
+}
+.wrapper form .pass{
+    margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+    color: #16a085;
+    text-decoration: none;
+    font-size: 17px;
+}
+.wrapper form .signup-link{
+    margin:-8px 0 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+.wrapper form .signup-link a{
+    color: #16a085;
+    text-decoration: none;
+    font-size: 17px;
+}
+.wrapper form .signup-link{
+    text-decoration: none;
+}
+.wrapper form .signup-link a:hover{
+    text-decoration: underline;
+}
+form .button input:hover{
+    background: #1abc9c;
+    animation: changecolor .3s infinite;
+}
+form .button input{
+    animation: changecolor .3s infinite;
+}
+.gohome a{
+    color:black;
+    font-size:10px;
+    text-decoration: none;
+}
+.gohome {
+    padding-top: 12px;
+}
+.gohome a:hover{
+   color:orange;
+} 
+/* service cards starting*/
+.cards {
+    width: 15%;
+    margin: 41px;
+    background: white;
+    border-radius: 4px;
+    display: block;
+    flex-direction: row;
+    margin-left: 6em;
+    position: relative;
+}
+.cards .img img {
+    width: 9.5em;
+    height: 8em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 2em;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    padding-inline-start: 3px;
+    margin-right: 1em;
+    position: relative;
+}
+
+.title{
+  text-align:center;
+  position:relative;
+  align-content: flex-start;
+  padding-top: 7px;
+  padding-bottom:8px;
+  color:#033333;
+ 
+}
+.description {
+    text-align: center;
+    display: block;
+    align-items: center;
+    inline-size: fit-content;
+    margin-bottom: 1em;
+}
+.ourprojects h2 {
+    position: relative;
+    font-size: 25px;
+    display: block;
+    border-radius: 1px;
+    margin-bottom: 3em;
+    margin-inline: 23em;
+    margin-top: 3em;
+    margin-left: 25em;
+}
+.ourprojects h2:before {
+    content: '';
+    height: 5px;
+    left: 1em;
+    top: 100%;
+    width: 70%;
+    background-color: white;
+    position: absolute;
+}
+.ourprojects{
+    align-items: center;
+    padding-bottom: 2px;
+    padding-top: 3em;;
+    border-radius:35em;
+    text-align: center;
+    justify-content: center;
+    color:#1abc9d;
+    font-size: 17px;
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.cards:hover{
+    box-shadow:2px 2px 5px 5px  #1abc9d;
+    border:2px solid #1abc9d;
+    cursor:pointer;
+    transition:.3s;
+}
