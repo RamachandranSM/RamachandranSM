@@ -7,11 +7,9 @@ body {
     font-family: Arial, sans-serif; 
     background: #040f22;
     scroll-snap-type: y mandatory;
-}
-body {
     overflow-x: hidden;
 }
-
+/* header side */
 section{
     height: 100vh;
     display: flex;
@@ -74,7 +72,6 @@ section{
     background-color: #007BFF; 
     color: white; 
     padding: 10px 21px;  
-    font-weight:bold;
     border: none; 
     border-radius: 18px; 
     text-decoration: none; 
@@ -105,25 +102,41 @@ section{
     }
 }
 /* end animation */
-ul li div.dropdown li{
-  display:block;
-  margin: 2px 0px;
-  padding-bottom:2em;
-}
-ul li div.dropdown{
-    width:auto;
-    position:absolute;
-    z-index:999;
-    display:none;
-    background-color: black;
-    margin-top:2em;
-}
-ul li:hover div.dropdown{
-    position:absolute;
-    display: block;
-    background-color:#000;
+ul.nav-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+ul.nav-link li {
+    position: relative;
+}
+
+ul.nav-link div.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background-color: #162c2e;
+    margin-top: 2em;
+    padding: 1em; 
+}
+
+ul.nav-link li:hover div.dropdown {
+    display: block;
+}
+
+ul.nav-link div.dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.nav-link div.dropdown li {
+    margin: 2px 0;
+    padding: 0.5em; 
+}
+/* end header section */
+/* body in index page */
 .homepage{
     text-align: left;
     padding-top: 4.2%;
@@ -248,6 +261,7 @@ img{
    box-sizing: content-box;
    border-width: left 20px;
 }
+/* end index page */
 /* image box start */
 .imagebox{
     position: relative;
@@ -280,6 +294,7 @@ img{
         justify-content: flex-end;  
       
  }
+ /* projects */
 .container{
     align-items: flex-start;
     color: white;
@@ -347,10 +362,9 @@ img{
     transform: translate(-50%, -50%);
     background-color:#d03645;
 }
-.servicecolor{
-    width: 100%;
-    height: 100vh;
-}
+                                   /* end projects page */
+
+/* start about page */
 .aboutme{
     align-items: center;
     padding-bottom: 2px;
@@ -409,6 +423,12 @@ img{
 .phone{
     padding-bottom: 15px ;
 }
+/* end about page */
+                                /*start service styling   */
+.servicecolor{
+    width: 100%;
+    height: 100vh;
+}
 .myservice h3 {
     text-align: center;
     align-items: center;
@@ -447,7 +467,7 @@ img{
     padding-top: 5em;
     background: #040f22;
     border-radius: 12px;
-    margin-bottom: 5em;
+    margin-bottom: 9em;
 }
 .servicehead:hover {
     border:  #333333 2px solid;
@@ -467,6 +487,9 @@ img{
     padding-left: 6px;
     padding-right: 5px;
 }
+  /* end service styling */
+
+  /* start form page */
 form{
     overflow: hidden;
 }
@@ -584,7 +607,8 @@ form .button input{
 .gohome a:hover{
    color:orange;
 } 
-/* service cards starting*/
+/* end form page */
+/* projects cards starting*/
 .cards {
     width: 14%;
     margin: 40px;
@@ -660,75 +684,42 @@ form .button input{
 }
 
 .cards:hover{
-    box-shadow: 2px 2px 2px 13px #1abc9d;
-    border:4px solid #1abc9d;
+    box-shadow: 0px 0px 0px 10px #1abc9d;
+    border:1px solid #1abc9d;
     cursor:pointer;
     transition:.3s;
 }
+/* end cards projects page */
 
-/* Responsive adjustments for small screens */
-@media only screen and (max-width: 768px) {
-    .nav-ul {
-        padding-left: 5%; 
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .nav-link {
-        flex-direction: column;
-    }
-
-    .nav-link li {
-        margin: 10px 0;
-    }
-
-    .homepage, .landpage {
-        padding-left: 5%;
-        width: 100%;
-    }
-
-    .image img {
-        height: 12em;
-        width: 10em;
-        margin: 0 auto;
-    }
-
-    .container .skillpercentage {
-        margin-left: 0;
-        margin-top: 5%;
-    }
-
-    .serviceinfo {
-        flex-direction: column;
-        margin-top: 3em;
-    }
-
-    .cards {
-        width: 80%;
-        margin: 20px auto;
-    }
-}
 /* blogs */
-
-/* Resetting some default styling */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 8px;
+    padding: 6px;
     text-align: center;
+}
+data {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    padding-top:9em;
+}
+data h1{
+    padding-bottom:1em;
 }
 .blogsimage img {
     height: 18vh;
-    width: 74%;
     padding-bottom: 3em;
 }
 .blog-posts {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin: 20px;
+    flex-direction: row-reverse;
+    margin-left:13em;
 }
-
 .post {
     background-color: white;
     border: 1px solid #ddd;
@@ -736,12 +727,15 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 15px;
-    width: 300px;
+    width: 11em;
     text-align: center;
+    height: 20em;
+    margin-top: 7em;
+    margin-right: 2em;
 }
 
 .post img {
-    max-width: 74%;
+    max-width: 80%;
     border-radius: 10px;
 }
 
@@ -756,11 +750,13 @@ header {
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #053321d7;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
+    margin-top:2em;
 }
+/* end blogs page */
