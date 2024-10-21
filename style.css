@@ -365,6 +365,9 @@ img{
                                    /* end projects page */
 
 /* start about page */
+.abt{
+    background:linear-gradient(400deg, #0099ff,black);
+}
 .aboutme{
     align-items: center;
     padding-bottom: 2px;
@@ -424,8 +427,15 @@ img{
     padding-bottom: 15px ;
 }
 /* end about page */
-                                /*start service styling   */
-.servicecolor{
+ /*start service styling   */
+ .servicecl {
+    margin-top: 23em;
+    background: linear-gradient(550deg, black, rgb(26, 188, 139));
+    position: absolute;
+    display: inline-grid;
+    justify-content: space-between;
+}
+ .servicecolor{
     width: 100%;
     height: 100vh;
 }
@@ -646,6 +656,7 @@ form .button input{
     align-items: center;
     inline-size: fit-content;
     margin-bottom: 1em;
+    padding-bottom:2em;
 }
 .ourprojects h2 {
     font-size: 25px;
@@ -688,6 +699,33 @@ form .button input{
     border:1px solid #1abc9d;
     cursor:pointer;
     transition:.3s;
+}
+.button{
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 21px;
+    border: none;
+    border-radius: 18px;
+    text-decoration: none;
+    text-align: center;
+    position:relative;
+}
+a.button:hover{
+    background-color:#ff0000;
+    transition:.3s;
+}
+.read{
+    margin-top:2em;
+}
+.projectend{
+    background-color: #053321d7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-top:2em;
 }
 /* end cards projects page */
 
@@ -740,8 +778,9 @@ data h1{
 }
 
 .post h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 10px 0;
+    color:#000000;
 }
 
 .post p {
@@ -760,3 +799,13 @@ footer {
     margin-top:2em;
 }
 /* end blogs page */
+.end{
+    background-color: #053321d7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin-top:2em;
+}
