@@ -46,6 +46,7 @@ section{
 }
 .nav-link {
     display: flex; 
+    position:relative;
 }
 
 .nav-link li {
@@ -111,7 +112,6 @@ ul.nav-link {
 ul.nav-link li {
     position: relative;
 }
-
 ul.nav-link div.dropdown {
     display: none;
     position: absolute;
@@ -119,6 +119,9 @@ ul.nav-link div.dropdown {
     background-color: #162c2e;
     margin-top: 2em;
     padding: 1em; 
+}
+.dropdown ul li{
+    position:absolute;
 }
 
 ul.nav-link li:hover div.dropdown {
@@ -730,11 +733,19 @@ a.button:hover{
 /* end cards projects page */
 
 /* blogs */
-header {
-    background-color: #4CAF50;
+.bloghead {
     color: white;
     padding: 6px;
     text-align: center;
+    position:fixed;
+    width:100%
+}
+header{
+        color: white;
+        padding: 6px;
+        text-align: center;
+        position:fixed;
+        width:100%
 }
 data {
     background-color: #4CAF50;
@@ -804,7 +815,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
     width: 100%;
     bottom: 0;
     margin-top:2em;
