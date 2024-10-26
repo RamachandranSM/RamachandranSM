@@ -6,8 +6,8 @@
 body {
     font-family: Arial, sans-serif; 
     background: #040f22;
-    scroll-snap-type: y mandatory;
     overflow-x: hidden;
+    overflow-y:scroll;
 }
 /* header side */
 section{
@@ -16,7 +16,6 @@ section{
     scroll-snap-align: start;
 }
 .nav-item {
-    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -24,7 +23,6 @@ section{
     padding-top: 1em;
     padding-bottom: 1em;
     width:auto;
-    background: #04333c;
 }
 
 
@@ -111,6 +109,7 @@ ul.nav-link {
 
 ul.nav-link li {
     position: relative;
+    display:absolute;
 }
 ul.nav-link div.dropdown {
     display: none;
@@ -121,17 +120,20 @@ ul.nav-link div.dropdown {
     padding: 1em; 
 }
 .dropdown ul li{
-    position:absolute;
+    position:relative;
+    z-index:1;
 }
 
 ul.nav-link li:hover div.dropdown {
     display: block;
+    z-index:2;
 }
 
 ul.nav-link div.dropdown ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index:-1;
 }
 
 ul.nav-link div.dropdown li {
@@ -148,17 +150,10 @@ ul.nav-link div.dropdown li {
     margin-left: 16px;
     padding-bottom:12em;
 }
-.image img{
-    border-style: groove;
-    border-radius: 20%;
-    margin-top: 4em;
-}
-img{
-    height: 17em;
-    width:15em;
-    border-radius:20%;
-    transform: scale(1.50);
-    justify-content:space-between;
+.images, img {
+    height: 20em;
+    width: 18em;
+    border-radius: 11vw;
 }
 .homepage .ram{
     position:relative;
@@ -172,7 +167,7 @@ img{
     position:absolute;
     background:#040f22;
     border-left:2px solid #f8e2e2;
-    animation: typing  3s  steps(9) infinite;
+    animation: typing  3s  steps(15) infinite;
 }
 
 @keyframes typing{
@@ -207,14 +202,14 @@ img{
     align-items: center;
 
 }
-.para{
-     padding-top:8px;
-     font-size: 16px;
-     color: #6bd72ddb;
-     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-weight:bold;
-     align-items: center;
-     margin-right:2em;
+.para {
+    padding-top: 8px;
+    font-size: 16px;
+    color: #cad3d2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    align-items: center;
+    margin-right: 2em;
 }
 .homebutton{
     padding-top: 25px;
@@ -241,11 +236,11 @@ img{
     animation:changeColor 3s infinite;
     width:100%;
 }
-.landpage{
-    padding-top:6.6%;
-    padding-left:11%;
-    padding-inline-end:30% ;
-    text-align:center;
+.landpage {
+    padding-top: 14.6%;
+    padding-left: 12%;
+    padding-inline-end: 30%;
+    text-align: center;
 }
 .homebutton{
     padding-right:30px;
@@ -254,7 +249,7 @@ img{
 
 .homepage{
     display: flex;
-     margin-top: 2em;
+     margin-top: 1em;
 }
 .hire{
    padding-left:30px ;
@@ -266,24 +261,6 @@ img{
 }
 /* end index page */
 /* image box start */
-.imagebox{
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20%;
-    z-index:1;
-}
-.imagebox:before{
-    content: "";
-    position: absolute;
-    inset: -77px -100px;
-    background: linear-gradient(315deg, #00ccff, #040f22);
-    transition: 0.5s;
-    animation: images .5s linear infinite;
-    margin-top: 4.8em;
-    border-radius: 5em;
-    margin-left: 6.3em;
-    margin-right: 2.5em;
-}
 .image{
     position: relative;
     height: 51vh;
@@ -368,9 +345,6 @@ img{
                                    /* end projects page */
 
 /* start about page */
-.abt{
-    background:linear-gradient(400deg, #0099ff,black);
-}
 .aboutme{
     align-items: center;
     padding-bottom: 2px;
@@ -380,6 +354,8 @@ img{
     justify-content: center;
     color:#1abc9d;
     font-size: 17px;
+    font-family: serif;
+    font-style:italic;
 }
 .aboutme h2{
     position: relative;
@@ -387,21 +363,13 @@ img{
     display: inline-block;
     border-radius:1px;
 }
-.aboutme h2:before {
-    content: '';
-    height: 5px;
-    left: 1.3em;
-    top: 100%;
-    width: 60%;
-    background-color: white;
-    position: absolute;
-}
 .aboutpara{
     margin-top: 6em;
     padding-bottom: 5em;
     text-align: left;
     color: #fff;
     margin-right: 47em;
+    font-style:italic;
 }
 .htmlskill{
     padding-bottom: 3em;;
@@ -415,7 +383,8 @@ img{
 .details{
     word-spacing: 1px;
     align-items: left;
-    color:#7cf03d;
+    color:#0effff;
+    font-style:italic;
 }
 .age{
     padding-bottom: 15px ;
@@ -632,7 +601,7 @@ form .button input{
     margin-left: 6%;
     position: relative;
 }
-.cards .img img {
+.cards .imagescard img {
     width: 8em;
     height: 8em;
     margin-top: 25px;
@@ -661,6 +630,10 @@ form .button input{
     margin-bottom: 1em;
     padding-bottom:2em;
 }
+.postcard{
+    display:flex;
+    align-items:center;
+}
 .ourprojects h2 {
     font-size: 25px;
     display: block;
@@ -671,15 +644,6 @@ form .button input{
     margin-top: 1em;
     margin-left: 25em;
     position:relative;
-}
-.ourprojects h2:before {
-    content: '';
-    height: 5px;
-    left: 1em;
-    top: 100%;
-    width: 70%;
-    background-color: white;
-    position: absolute;
 }
 .ourprojects{
     align-items: center;
@@ -741,11 +705,9 @@ a.button:hover{
     width:100%
 }
 header{
-        color: white;
-        padding: 6px;
+        color:#040f22;;
         text-align: center;
-        position:fixed;
-        width:100%
+        width:100%;
 }
 data {
     background-color: #4CAF50;
@@ -818,4 +780,12 @@ footer {
     width: 100%;
     bottom: 0;
     margin-top:2em;
+}
+.footerclass{
+    display:flex;
+    background-color:#0effff;
+}
+.footerinfo{
+    display:inline;
+   
 }
