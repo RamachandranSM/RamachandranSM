@@ -18,7 +18,7 @@ I’m currently a final-year student at Nadar Saraswathi College of Engineering 
 
 Here are some projects that showcase my skills and interests:
 
-- 🌐 [**Personal Portfolio**](#) - A website highlighting my work, skills, and journey.
+- 🌐 [**Personal Portfolio**](https://ramachandransm.github.io/RamachandranSM/) - A website highlighting my work, skills, and journey.
 - 🛒 [**E-commerce Website**](#) - An online shopping platform with a shopping cart, user authentication, and more.
 - 🎮 [**Gaming Apps**](#) - Interactive games built using JavaScript, showcasing creativity and functionality.
 - 📷 [**Instagram Clone**](#) - A visually appealing clone of Instagram, with a focus on front-end design and UX.
