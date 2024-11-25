@@ -154,6 +154,7 @@ ul.nav-link div.dropdown li {
     height: 20em;
     width: 18em;
     border-radius: 11vw;
+    position:relative;
 }
 .homepage .ram{
     position:relative;
@@ -591,100 +592,101 @@ form .button input{
 } 
 /* end form page */
 /* projects cards starting*/
-.cards {
-    width: 14%;
-    margin: 40px;
-    background: white;
-    border-radius: 4px;
-    display: block;
-    flex-direction: row;
-    margin-left: 6%;
-    position: relative;
-}
-.cards .imagescard img {
-    width: 8em;
-    height: 8em;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 26px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    padding-inline-start: 3px;
-    position: relative;
-}
-
-.title{
-  text-align:center;
-  position:relative;
-  align-content: flex-start;
-  padding-top: 7px;
-  padding-bottom:8px;
-  color:#033333;
- 
-}
-.description {
-    text-align: center;
-    display: block;
-    align-items: center;
-    inline-size: fit-content;
-    margin-bottom: 1em;
-    padding-bottom:2em;
-}
-.postcard{
-    display:flex;
-    align-items:center;
-}
-.ourprojects h2 {
-    font-size: 25px;
-    display: block;
-    position:relative;
-    border-radius: 1px;
-    margin-bottom: 3em;
-    margin-inline: 20em;
-    margin-top: 1em;
-    margin-left: 25em;
-    position:relative;
-}
-.ourprojects{
-    align-items: center;
-    padding-bottom: 2px;
-    padding-top: 3em;;
-    border-radius:35em;
-    text-align: center;
-    justify-content: center;
-    color:#1abc9d;
-    font-size: 17px;
-}
 .projects {
     display: flex;
     flex-wrap: wrap;
-   
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #040f22;
 }
 
-.cards:hover{
-    box-shadow: 0px 0px 0px 10px #1abc9d;
-    border:1px solid #1abc9d;
-    cursor:pointer;
-    transition:.3s;
+.ourprojects h2 {
+    font-size: 25px;
+    color: #1abc9d;
+    margin-bottom: 30px;
+    text-align: center;
 }
-.button{
+
+.ourprojects {
+    padding: 10px;
+    text-align: center;
+    color: #1abc9d;
+    font-size: 17px;
+}
+
+.postcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards {
+    width: 14%; /* Adjusted for compactness */
+    background: white;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.cards .imagescard img {
+    width: 8em;
+    height: 8em;
+    margin: 20px 0;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.cards:hover {
+    box-shadow: 0px 0px 10px 2px #1abc9d;
+    border: 1px solid #1abc9d;
+    transform: translateY(-5px);
+    transition: all 0.3s;
+}
+
+.title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #033333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.description {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.read {
+    margin-top: 10px;
+}
+
+.read .button {
     background-color: #007BFF;
     color: white;
-    padding: 10px 21px;
+    padding: 8px 16px;
     border: none;
     border-radius: 18px;
     text-decoration: none;
-    text-align: center;
-    position:relative;
+    font-size: 0.9em;
 }
-a.button:hover{
-    background-color:#ff0000;
-    transition:.3s;
+
+.read .button:hover {
+    background-color: #ff0000;
+    transition: 0.3s;
 }
-.read{
-    margin-top:2em;
-}
-.projectend{
+
+.projectend {
     background-color: #053321d7;
     color: white;
     text-align: center;
@@ -692,8 +694,8 @@ a.button:hover{
     position: fixed;
     width: 100%;
     bottom: 0;
-    margin-top:2em;
 }
+
 /* end cards projects page */
 
 /* blogs */
@@ -761,31 +763,48 @@ data h1{
     color: #666;
 }
 
-footer {
-    background-color: #053321d7;
-    color: white;
+/*footer styles*/
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+.footer-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f4a261;
+}
+.footer-item, .footer-text {
+    margin: 5px 0;
+    color: #ddd;
+}
+.footer-item a {
+    color: #f4a261;
+    text-decoration: none;
+}
+.footer-item a:hover {
+    text-decoration: underline;
+}
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-end {
     text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    margin-top:2em;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 0.9em;
 }
-/* end blogs page */
-.end{
-    background-color: #053321d7;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
-    margin-top:2em;
-}
-.footerclass{
-    display:flex;
-    background-color:#0effff;
-}
-.footerinfo{
-    display:inline;
-   
-}
+
