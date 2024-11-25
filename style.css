@@ -428,7 +428,6 @@ ul.nav-link div.dropdown li {
     left: 25em;
     top: 100%;
     width: 8%;
-    background-color: white;
     position: absolute;
 }
 .serviceinfo{
@@ -701,7 +700,6 @@ form .button input{
 /* blogs */
 .bloghead {
     color: white;
-    padding: 6px;
     text-align: center;
     position:fixed;
     width:100%
@@ -712,11 +710,10 @@ header{
         width:100%;
 }
 data {
-    background-color: #4CAF50;
     color: white;
     padding: 6px;
     text-align: center;
-    padding-top:9em;
+    padding-top:12em;
 }
 data h1{
     padding-bottom:1em;
