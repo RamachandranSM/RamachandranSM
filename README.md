@@ -50,5 +50,8 @@ Let's connect and collaborate! Feel free to reach out to me on social media:
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white)](#)
 
 ---
+### My Profiles:
+- [LeetCode](https://leetcode.com/u/Ram2k04/)
+
 
 Looking forward to contributing to open-source projects, learning from the community, and growing my skills as a developer! 🌱
