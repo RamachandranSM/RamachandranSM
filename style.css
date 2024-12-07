@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, sans-serif; 
-    background: #040f22;
+    background-color: #040f22;
     overflow-x: hidden;
     overflow-y:scroll;
 }
@@ -15,7 +15,7 @@ section{
     display: flex;
     scroll-snap-align: start;
 }
-.nav-item {
+.navbar-expand-md {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -77,7 +77,7 @@ section{
     text-align:center;
 }
 
-.nav-item .call:hover {
+.nav-item .call :hover {
     background-color: #c7032df5; 
 }
 .nav-link a:hover{
